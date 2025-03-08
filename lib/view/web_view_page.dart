@@ -1,34 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-
-// class WebViewPage extends StatelessWidget {
-//   const WebViewPage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     ;
-//     return Scaffold(
-//       body: SafeArea(
-//         child: InAppWebView(
-//           // initialUrlRequest: URLRequest(url: WebUri("https://www.sarpaynantaw.com/web/payapp/login")),
-//           initialUrlRequest: URLRequest(
-//               url: WebUri("https://www.sarpaynantaw.com/web/money/login")),
-//           androidOnPermissionRequest: (controller, origin, resources) async {
-//             return PermissionRequestResponse(
-//               resources: resources,
-//               action: PermissionRequestResponseAction.GRANT,
-//             );
-//           },
-//           onReceivedServerTrustAuthRequest: (controller, challenge) async {
-//             return ServerTrustAuthResponse(
-//                 action: ServerTrustAuthResponseAction.PROCEED);
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -56,17 +25,6 @@ class _WebViewPageState extends State<WebViewPage> {
       },
       child: SafeArea(
         child: Scaffold(
-          // appBar: AppBar(
-          //   title: const Text("WebView App"),
-          //   actions: [
-          //     IconButton(
-          //       icon: const Icon(Icons.refresh),
-          //       onPressed: () {
-          //         webViewController.reload(); // Reload the WebView
-          //       },
-          //     ),
-          //   ],
-          // ),
           body: Column(
             children: [
               // Linear progress bar for loading
@@ -81,6 +39,7 @@ class _WebViewPageState extends State<WebViewPage> {
                 child: InAppWebView(
                   initialUrlRequest: URLRequest(
                     url: WebUri("https://www.sarpaynantaw.com/web/money/login"),
+                    //https://www.sarpaynantaw.com/web/payapp/login
                   ),
                   onWebViewCreated: (controller) {
                     webViewController = controller; // Set the controller

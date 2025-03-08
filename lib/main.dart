@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:pay_app_webview/view/splash_page.dart';
 import 'package:permission_handler/permission_handler.dart';
